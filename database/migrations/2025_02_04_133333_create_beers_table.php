@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('beers', function (Blueprint $table) {
             $table->id();
+            $table->string("name")->nullable();
+            $table->string("type")->nullable();
+            $table->string("cl")->nullable();
+            $table->char("naz", 4)->nullable();
+            $table->text("descrizione")->nullable();
             $table->timestamps();
         });
     }
@@ -25,3 +30,4 @@ return new class extends Migration
         Schema::dropIfExists('beers');
     }
 };
+// "name", "type", "cl", "naz", "descrizione"

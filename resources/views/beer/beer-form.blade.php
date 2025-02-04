@@ -6,32 +6,32 @@
             </div>
         </div>
         <!-- inserimento form -->
-        <form method="POST">
+        <form method="POST" action="{{route("beer.Store")}}">
             @csrf
             <div class="mb-3">
                 <label class="form-label">nome birra</label>
-                <input type="text" class="form-control" aria-describedby="emailHelp">
+                <input type="text" class="form-control" aria-describedby="emailHelp" name="name">
             </div>
             <div class="mb-3">
                 <label class="form-label">dimensione birra</label>
-                <input type="text" class="form-control" aria-describedby="emailHelp">
+                <input type="text" class="form-control" aria-describedby="emailHelp" name="cl">
             </div>
             <div class="mb-3">
                 <label class="form-label">Nazionalità</label>
-                <input type="text" class="form-control" aria-describedby="emailHelp">
+                <input type="text" class="form-control" aria-describedby="emailHelp" name="naz">
             </div>
             <div class="mb-3">
                 <label class="form-label">tipo di birra</label>
-                <input type="text" class="form-control" aria-describedby="emailHelp">
+                <input type="text" class="form-control" aria-describedby="emailHelp" name="type">
             </div>
                     <!-- inserimwnto textarea -->
             <div class="form-floating">
-                <textarea class="form-control" placeholder="Leave a comment here" style="height: 100px"></textarea>
+                <textarea name="descrizione" class="form-control" placeholder="Leave a comment here" style="height: 100px"></textarea>
                 <label for="floatingTextarea2">Descrivi la birra</label>
             </div>
             <button type="submit" class="btn btn-primary">inserisci birra</button>
         </form>
     </div>
 
-
+    <!-- "name", "type", "cl", "naz", "descrizione" -->
 </x-layout>
