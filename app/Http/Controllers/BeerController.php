@@ -20,6 +20,7 @@ class BeerController extends Controller
                     "cl" => $request->cl,
                     "naz" =>$request->naz,
                     "descrizione" =>$request->descrizione,
+                    "img" => $request->file("img")->store("cover-beer", "public"),
                 ]
               );
 
